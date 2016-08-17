@@ -94,7 +94,7 @@ namespace pet_rescue.Models
 
         [DataType(DataType.Date)]
         [Display(Name = "Birthday")]
-        public DateTime Birthdate { get; set; } //TODO: Check for legal age to adopt an animal, validation needed when adopting a pet?
+        public DateTime? Birthdate { get; set; } //TODO: Check for legal age to adopt an animal, validation needed when adopting a pet?
 
         [DataType(DataType.PhoneNumber)]
         [Display(Name = "Contact Number")]

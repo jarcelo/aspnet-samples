@@ -9,7 +9,7 @@ namespace pet_rescue.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(pet_rescue.Models.ApplicationDbContext context)
