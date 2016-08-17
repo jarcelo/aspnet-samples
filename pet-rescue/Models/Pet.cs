@@ -11,6 +11,7 @@ namespace pet_rescue.Models
     }
     public abstract class Pet
     {
+        // Pet ID should be assigned by the shelter
         public int ID { get; set; }
         public string Name { get; set; }
         public Gender Gender { get; set; }

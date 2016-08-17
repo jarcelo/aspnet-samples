@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace pet_rescue.Models
@@ -79,6 +80,44 @@ namespace pet_rescue.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        // Add additional user properties
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+
+        [Required]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Birthday")]
+        public DateTime Birthdate { get; set; } //TODO: Check for legal age to adopt an animal, validation needed when adopting a pet?
+
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Contact Number")]
+        public string PhoneNumber { get; set; }
+
+        [Display(Name = "Street/Number")]
+        public string Address1 { get; set; }
+
+        [Display(Name = "Street Name")]
+        public string Address2 { get; set; }
+
+        [Display(Name = "City")]
+        public string City { get; set; }
+
+        [Display(Name = "State")]
+        public string State { get; set; }
+
+        [Display(Name = "Zip Code")]
+        public string ZipCode { get; set; }
+
+        // Display Address, interface or abstract?
+
+        // Display FullName, interface or abstract?
+
     }
 
     public class ResetPasswordViewModel
