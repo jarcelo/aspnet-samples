@@ -16,9 +16,13 @@ namespace pet_rescue.Models
     {
         Grey, White, Black, Orange, Buff
     }
-    public class Cat : Pet
+    public class Cat : Pet, IPetBreed<CatBreed>
     {
         public CatSize Size { get; set; }
         public CatColor Color { get; set; }
+
+        // TODO: Check if Cat Size and Cat Color can be implemented as interface
+        // Implement Breed Interface
+        public CatBreed Breed { get; set; }
     }
 }

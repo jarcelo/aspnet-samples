@@ -33,10 +33,13 @@ namespace pet_rescue.Models
         [Display(Name = "XX-Large")]
         XXLarge, // 90 lbs +
     }
-    public class Dog : Pet
+    public class Dog : Pet, IPetBreed<DogBreed>
     {
         public Color Color { get; set; }
         public DogSize Size { get; set; }
+
+        // Implement Breed interface
+        public DogBreed Breed { get; set; }
 
     }
 }
