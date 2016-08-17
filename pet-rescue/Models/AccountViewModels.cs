@@ -83,15 +83,16 @@ namespace pet_rescue.Models
 
         // Add additional user properties
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must not exceed {2} characters long.")]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
 
         [Required]
+        [StringLength(100, ErrorMessage = "The {0} must not exceed {2} characters long.")]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
+        [DataType(DataType.Date)]
         [Display(Name = "Birthday")]
         public DateTime Birthdate { get; set; } //TODO: Check for legal age to adopt an animal, validation needed when adopting a pet?
 
@@ -99,16 +100,20 @@ namespace pet_rescue.Models
         [Display(Name = "Contact Number")]
         public string PhoneNumber { get; set; }
 
+        [StringLength(100, ErrorMessage = "The {0} must not exceed {2} characters long.")]
         [Display(Name = "Street/Number")]
         public string Address1 { get; set; }
 
+        [StringLength(100, ErrorMessage = "The {0} must not exceed {2} characters long.")]
         [Display(Name = "Street Name")]
         public string Address2 { get; set; }
 
+        [StringLength(100, ErrorMessage = "The {0} must not exceed {2} characters long.")]
         [Display(Name = "City")]
         public string City { get; set; }
 
-        [Display(Name = "State")]
+        [StringLength(50, ErrorMessage = "The {0} must not exceed {2} characters long.")]
+        [Display(Name = "State")] // TODO: Make this a a list datatype of 50 states, and should be on a drop down when user will register
         public string State { get; set; }
 
         [Display(Name = "Zip Code")]
