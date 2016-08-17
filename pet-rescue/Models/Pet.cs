@@ -9,7 +9,7 @@ namespace pet_rescue.Models
     {
         Male, Female
     }
-    public abstract class Animal
+    public abstract class Pet
     {
         public int ID { get; set; }
         public string Name { get; set; }
@@ -20,7 +20,8 @@ namespace pet_rescue.Models
         public string Description { get; set; }
         public bool IsNeuteredOrSpayed { get; set; }
         public DateTime EnteredDataDate { get; set; }
-        public abstract string Breed { get; set; }
+        // TODO: Make Breed as p
+        //public abstract string Breed { get; set; } 
         public string Notes { get; set; }
 
 

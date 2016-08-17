@@ -33,12 +33,10 @@ namespace pet_rescue.Models
         [Display(Name = "XX-Large")]
         XXLarge, // 90 lbs +
     }
-    public class Dog : Animal
+    public class Dog : Pet
     {
         public Color Color { get; set; }
         public DogSize Size { get; set; }
 
-        // Implement abstract property from base class
-        public override string Breed { get; set; }
     }
 }

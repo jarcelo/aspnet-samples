@@ -16,13 +16,9 @@ namespace pet_rescue.Models
     {
         Grey, White, Black, Orange, Buff
     }
-    public class Cat : Animal
+    public class Cat : Pet
     {
         public CatSize Size { get; set; }
         public CatColor Color { get; set; }
-
-
-        // Implement the abstract property from base class
-        public override string Breed { get; set; }
     }
 }
