@@ -11,6 +11,7 @@ namespace pet_rescue.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
+        // Check the navigations keys
 
         // A dog breed will map to a collection of dog instance
         public ICollection<Dog> Dogs { get; set; }

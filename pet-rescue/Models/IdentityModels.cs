@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 
 namespace pet_rescue.Models
 {
@@ -16,6 +17,20 @@ namespace pet_rescue.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        // Add user properties
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public DateTime Birthdate { get; set; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string ZipCode { get; set; }
+
+        // A member will either be a Donor or Adopter
+        public virtual Donor Donor { get; set; }
+        public virtual Adopter Adopter { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

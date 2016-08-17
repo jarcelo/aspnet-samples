@@ -21,5 +21,13 @@ namespace pet_rescue.Models
         public bool IsNeuteredOrSpayed { get; set; }
         public DateTime EnteredDataDate { get; set; }
         public abstract string Breed { get; set; }
+        public string Notes { get; set; }
+
+
+        // Foreign Key
+        public int ApplicationUserID { get; set; } //check the id for identity user
+        public virtual ApplicationUser Member { get; set; }
+
+
     }
 }
