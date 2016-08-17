@@ -18,7 +18,7 @@ namespace pet_rescue.Models
             return userIdentity;
         }
 
-        // Add user properties
+        // Add additional user properties
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public DateTime Birthdate { get; set; }
@@ -27,10 +27,6 @@ namespace pet_rescue.Models
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
-
-        // A member will either be a Donor or Adopter
-        public virtual Donor Donor { get; set; }
-        public virtual Adopter Adopter { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

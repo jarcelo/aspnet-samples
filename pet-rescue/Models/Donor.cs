@@ -13,7 +13,7 @@ namespace pet_rescue.Models
         public string Notes { get; set; }
 
         // Navigation properties
-        public virtual ICollection<Pet> Animals { get; set; }
+        public virtual ICollection<Pet> DonatedPets { get; set; }
 
     }
 }

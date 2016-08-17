@@ -36,7 +36,7 @@ namespace pet_rescue.Models
         public AdoptionReason AdoptionReason { get; set; }
 
         // Navigation Properties
-        public virtual ICollection<Pet> Animals { get; set; }
+        public virtual ICollection<Pet> AdoptedPets { get; set; }
 
     }
 }
