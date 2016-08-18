@@ -9,7 +9,7 @@ namespace pet_rescue.Models
     {
         // Contraint: Donor can donate one or more pets at a time
         //TODO: Check the design
-        public DateTime PetDonationDate { get; set; }
+        public DateTime? PetDonationDate { get; set; }
         public string Notes { get; set; }
 
         // Navigation properties

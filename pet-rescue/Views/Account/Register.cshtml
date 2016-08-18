@@ -13,6 +13,8 @@
         <h4>Create a new account.</h4>
         <hr />
         @Html.ValidationSummary("", new { @class = "text-danger" })
+        <h4>Login Information:</h4>
+        
         <div class="form-group">
             @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
@@ -32,6 +34,7 @@
             </div>
         </div>
         <!-- Additional user properties -->
+        <h4>Member Information:</h4>
         <div class="form-group">
             @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
@@ -56,6 +59,7 @@
                 @Html.TextBoxFor(m => m.Birthdate, new { @class = "form-control" })
             </div>
         </div>
+        <h4>Member Address:</h4>
         <div class="form-group">
             @Html.LabelFor(m => m.Address1, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">

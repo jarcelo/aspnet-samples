@@ -1,3 +1,3 @@
 ﻿$(function(){
-    alert("Hello stl pet-rescue");
+    //alert("Hello stl pet-rescue");
 });

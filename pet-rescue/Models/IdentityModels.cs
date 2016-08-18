@@ -40,5 +40,6 @@ namespace pet_rescue.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }
