@@ -1,18 +1,20 @@
 namespace pet_rescue.Migrations
 {
     using System;
+    using Models;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using DAL;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<pet_rescue.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<PetRescueContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(pet_rescue.Models.ApplicationDbContext context)
+        protected override void Seed(PetRescueContext context)
         {
             //  This method will be called after migrating to the latest version.
 
